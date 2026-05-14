@@ -10,12 +10,12 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo">CoffexoMotions</div>
+            <div class="logo">🎬 CoffexoMotions</div>
             <ul class="nav-links">
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#portfolio">Project</a></li>
+                <li><a href="#portfolio">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -27,25 +27,61 @@
             <div class="profile-circle">
                 <div class="profile-initials">CM</div>
             </div>
-            <h1>Hi I'm<br>CoffexoMotions</h1>
-            <p class="tagline">Video Editor.</p>
+            <div class="hero-text">
+                <h1>CoffexoMotions</h1>
+                <p class="tagline">Professional Video Editor</p>
+                <p class="subtitle">Transforming raw footage into compelling visual stories</p>
+            </div>
             <div class="social-links">
                 <a href="https://github.com" target="_blank" class="social-icon">🔗</a>
                 <a href="https://linkedin.com" target="_blank" class="social-icon">💼</a>
+                <a href="https://youtube.com" target="_blank" class="social-icon">📹</a>
             </div>
+            <a href="#portfolio" class="cta-button">View My Work</a>
         </div>
+        <div class="hero-decoration"></div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2>Contact Me:</h2>
-            <div class="contact-form">
-                <div class="email-input">
-                    <span class="email-icon">✉️</span>
-                    <input type="email" placeholder="your.email@example.com">
+            <div class="about-wrapper">
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <p>I'm a passionate video editor with expertise in creating stunning visual content. From cinematic edits to dynamic motion graphics, I specialize in bringing creative visions to life through innovative editing techniques and attention to detail.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>50+</h3>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="stat">
+                            <h3>5+</h3>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="stat">
+                            <h3>100%</h3>
+                            <p>Client Satisfaction</p>
+                        </div>
+                    </div>
                 </div>
-                <button class="submit-btn">Submit</button>
+                <div class="about-contact">
+                    <h3>Get In Touch</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="your.email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Tell me about your project" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -53,22 +89,37 @@
     <!-- Experience Section -->
     <section id="experience" class="experience">
         <div class="container">
-            <h2>EXPERIENCES</h2>
+            <h2>My Expertise</h2>
             <div class="experience-grid">
-                <div class="experience-card main-card">
-                    <div class="card-content">CM</div>
+                <div class="experience-card">
+                    <div class="card-icon">✂️</div>
+                    <h3>Video Editing</h3>
+                    <p>Professional editing with seamless transitions and precise color grading</p>
                 </div>
                 <div class="experience-card">
-                    <div class="card-content">Content<br>Creator</div>
+                    <div class="card-icon">✨</div>
+                    <h3>Motion Graphics</h3>
+                    <p>Dynamic animations and visual effects that capture attention</p>
                 </div>
                 <div class="experience-card">
-                    <div class="card-content">Video<br>Editor</div>
+                    <div class="card-icon">🎨</div>
+                    <h3>Color Grading</h3>
+                    <p>Professional color correction and cinematic grading</p>
                 </div>
                 <div class="experience-card">
-                    <div class="card-content">Graphic<br>Designer</div>
+                    <div class="card-icon">🔊</div>
+                    <h3>Audio Design</h3>
+                    <p>Sound design, mixing, and audio synchronization</p>
                 </div>
                 <div class="experience-card">
-                    <div class="card-content">Motion<br>Designer</div>
+                    <div class="card-icon">🎬</div>
+                    <h3>Post-Production</h3>
+                    <p>Complete post-production workflow management</p>
+                </div>
+                <div class="experience-card">
+                    <div class="card-icon">🛠️</div>
+                    <h3>Adobe Suite</h3>
+                    <p>Expert in Premiere Pro, After Effects, and Audition</p>
                 </div>
             </div>
         </div>
@@ -77,76 +128,105 @@
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
         <div class="container">
-            <h2>Recent Projects.</h2>
+            <h2>Recent Projects</h2>
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="editing">Editing</button>
+                <button class="filter-btn" data-filter="motion">Motion</button>
+                <button class="filter-btn" data-filter="short">Shorts</button>
+            </div>
             <div class="portfolio-grid">
-                <div class="portfolio-card">
+                <div class="portfolio-card" data-category="editing">
                     <div class="video-container">
-                        <iframe width="100%" height="280" src="https://www.youtube.com/embed/" 
-                                frameborder="0" allowfullscreen></iframe>
+                        <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
                     </div>
+                    <h3>Project Title</h3>
+                    <p class="category-tag">Editing</p>
                 </div>
-                <div class="portfolio-card">
+                <div class="portfolio-card" data-category="motion">
                     <div class="video-container">
-                        <iframe width="100%" height="280" src="https://www.youtube.com/embed/" 
-                                frameborder="0" allowfullscreen></iframe>
+                        <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
                     </div>
+                    <h3>Project Title</h3>
+                    <p class="category-tag">Motion</p>
                 </div>
-                <div class="portfolio-card">
+                <div class="portfolio-card" data-category="short">
                     <div class="video-container">
-                        <iframe width="100%" height="280" src="https://www.youtube.com/embed/" 
-                                frameborder="0" allowfullscreen></iframe>
+                        <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
                     </div>
+                    <h3>Project Title</h3>
+                    <p class="category-tag">Shorts</p>
                 </div>
-                <div class="portfolio-card">
+                <div class="portfolio-card" data-category="editing">
                     <div class="video-container">
-                        <iframe width="100%" height="280" src="https://www.youtube.com/embed/" 
-                                frameborder="0" allowfullscreen></iframe>
+                        <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
                     </div>
+                    <h3>Project Title</h3>
+                    <p class="category-tag">Editing</p>
                 </div>
-                <div class="portfolio-card">
+                <div class="portfolio-card" data-category="motion">
                     <div class="video-container">
-                        <iframe width="100%" height="280" src="https://www.youtube.com/embed/" 
-                                frameborder="0" allowfullscreen></iframe>
+                        <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
                     </div>
+                    <h3>Project Title</h3>
+                    <p class="category-tag">Motion</p>
                 </div>
-                <div class="portfolio-card">
+                <div class="portfolio-card" data-category="short">
                     <div class="video-container">
-                        <iframe width="100%" height="280" src="https://www.youtube.com/embed/" 
-                                frameborder="0" allowfullscreen></iframe>
+                        <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
                     </div>
-                </div>
-                <div class="portfolio-card">
-                    <div class="video-container">
-                        <iframe width="100%" height="280" src="https://www.youtube.com/embed/" 
-                                frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </div>
-                <div class="portfolio-card">
-                    <div class="video-container">
-                        <iframe width="100%" height="280" src="https://www.youtube.com/embed/" 
-                                frameborder="0" allowfullscreen></iframe>
-                    </div>
+                    <h3>Project Title</h3>
+                    <p class="category-tag">Shorts</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Create Something Amazing?</h2>
+            <p>Let's collaborate on your next video project</p>
+            <a href="#about" class="cta-button-large">Start Your Project</a>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Let's Work Together</h2>
-            <p>Ready to bring your vision to life?</p>
-            <div class="contact-buttons">
-                <a href="mailto:your.email@example.com" class="contact-btn">Email Me</a>
-                <a href="https://youtube.com" target="_blank" class="contact-btn">YouTube</a>
-                <a href="https://instagram.com" target="_blank" class="contact-btn">Instagram</a>
+            <h2>Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <span class="icon">📧</span>
+                        <a href="mailto:your.email@example.com">your.email@example.com</a>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">🌐</span>
+                        <a href="https://youtube.com" target="_blank">YouTube Channel</a>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">📱</span>
+                        <a href="https://instagram.com" target="_blank">Instagram</a>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">💼</span>
+                        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2026 CoffexoMotions. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2026 CoffexoMotions. All rights reserved.</p>
+            <p class="footer-subtitle">Crafted with passion for visual storytelling</p>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
