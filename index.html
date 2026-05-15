@@ -7,15 +7,22 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Animated Particles Background -->
+    <div class="particles-container" id="particlesContainer"></div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo">🎬 CoffexoMotions</div>
+            <div class="logo-container">
+                <img src="" alt="CoffexoMotions" class="logo-image" id="logoImage">
+                <span class="logo-placeholder">Your Logo</span>
+            </div>
             <ul class="nav-links">
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
                 <li><a href="#portfolio">Projects</a></li>
+                <li><a href="#reviews">Reviews</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -31,11 +38,6 @@
                 <h1>CoffexoMotions</h1>
                 <p class="tagline">Professional Video Editor</p>
                 <p class="subtitle">Transforming raw footage into compelling visual stories</p>
-            </div>
-            <div class="social-links">
-                <a href="https://github.com" target="_blank" class="social-icon">🔗</a>
-                <a href="https://linkedin.com" target="_blank" class="social-icon">💼</a>
-                <a href="https://youtube.com" target="_blank" class="social-icon">📹</a>
             </div>
             <a href="#portfolio" class="cta-button">View My Work</a>
         </div>
@@ -137,46 +139,105 @@
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-card" data-category="editing">
-                    <div class="video-container">
-                        <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+                    <div class="portfolio-card-inner">
+                        <div class="video-container">
+                            <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h3>Project Title</h3>
+                            <p class="category-tag">Editing</p>
+                        </div>
                     </div>
-                    <h3>Project Title</h3>
-                    <p class="category-tag">Editing</p>
+                    <div class="card-border"></div>
                 </div>
                 <div class="portfolio-card" data-category="motion">
-                    <div class="video-container">
-                        <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+                    <div class="portfolio-card-inner">
+                        <div class="video-container">
+                            <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h3>Project Title</h3>
+                            <p class="category-tag">Motion</p>
+                        </div>
                     </div>
-                    <h3>Project Title</h3>
-                    <p class="category-tag">Motion</p>
+                    <div class="card-border"></div>
                 </div>
                 <div class="portfolio-card" data-category="short">
-                    <div class="video-container">
-                        <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+                    <div class="portfolio-card-inner">
+                        <div class="video-container">
+                            <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h3>Project Title</h3>
+                            <p class="category-tag">Shorts</p>
+                        </div>
                     </div>
-                    <h3>Project Title</h3>
-                    <p class="category-tag">Shorts</p>
+                    <div class="card-border"></div>
                 </div>
                 <div class="portfolio-card" data-category="editing">
-                    <div class="video-container">
-                        <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+                    <div class="portfolio-card-inner">
+                        <div class="video-container">
+                            <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h3>Project Title</h3>
+                            <p class="category-tag">Editing</p>
+                        </div>
                     </div>
-                    <h3>Project Title</h3>
-                    <p class="category-tag">Editing</p>
+                    <div class="card-border"></div>
                 </div>
                 <div class="portfolio-card" data-category="motion">
-                    <div class="video-container">
-                        <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+                    <div class="portfolio-card-inner">
+                        <div class="video-container">
+                            <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h3>Project Title</h3>
+                            <p class="category-tag">Motion</p>
+                        </div>
                     </div>
-                    <h3>Project Title</h3>
-                    <p class="category-tag">Motion</p>
+                    <div class="card-border"></div>
                 </div>
                 <div class="portfolio-card" data-category="short">
-                    <div class="video-container">
-                        <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+                    <div class="portfolio-card-inner">
+                        <div class="video-container">
+                            <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="card-content">
+                            <h3>Project Title</h3>
+                            <p class="category-tag">Shorts</p>
+                        </div>
                     </div>
-                    <h3>Project Title</h3>
-                    <p class="category-tag">Shorts</p>
+                    <div class="card-border"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <h2>Client Reviews</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"CoffexoMotions delivered an exceptional video that exceeded all my expectations. The attention to detail and creative approach was outstanding!"</p>
+                    <p class="review-author">- Sarah Johnson</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Professional, responsive, and incredibly talented. The final product was amazing and our audience loved it. Highly recommended!"</p>
+                    <p class="review-author">- Michael Chen</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Working with CoffexoMotions was a game-changer. They brought our vision to life with creativity and technical excellence."</p>
+                    <p class="review-author">- Emma Davis</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="review-text">"Best investment we made for our brand. The editing quality and turnaround time was phenomenal. Will definitely work together again!"</p>
+                    <p class="review-author">- James Williams</p>
                 </div>
             </div>
         </div>
@@ -200,19 +261,17 @@
                     <h3>Contact Information</h3>
                     <div class="info-item">
                         <span class="icon">📧</span>
-                        <a href="mailto:your.email@example.com">your.email@example.com</a>
+                        <div>
+                            <p class="info-label">Email</p>
+                            <a href="mailto:coffexo.motions@gmail.com">coffexo.motions@gmail.com</a>
+                        </div>
                     </div>
                     <div class="info-item">
-                        <span class="icon">🌐</span>
-                        <a href="https://youtube.com" target="_blank">YouTube Channel</a>
-                    </div>
-                    <div class="info-item">
-                        <span class="icon">📱</span>
-                        <a href="https://instagram.com" target="_blank">Instagram</a>
-                    </div>
-                    <div class="info-item">
-                        <span class="icon">💼</span>
-                        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+                        <span class="icon">🎥</span>
+                        <div>
+                            <p class="info-label">YouTube Channel</p>
+                            <a href="https://youtube.com/@coffexo?si=UUgOv5bfUAkDJe6Q" target="_blank">Subscribe to CoffexoMotions</a>
+                        </div>
                     </div>
                 </div>
             </div>

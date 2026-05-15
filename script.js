@@ -1,14 +1,38 @@
+// Create animated particles background
+function createParticles() {
+    const container = document.getElementById('particlesContainer');
+    const particleCount = 30;
+
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        
+        const size = Math.random() * 100 + 50;
+        const duration = Math.random() * 15 + 10;
+        const delay = Math.random() * 5;
+        const xPos = Math.random() * 100;
+        const yPos = Math.random() * 100;
+        
+        particle.style.width = size + 'px';
+        particle.style.height = size + 'px';
+        particle.style.left = xPos + '%';
+        particle.style.top = yPos + '%';
+        particle.style.setProperty('--duration', duration + 's');
+        particle.style.animation = `particleFloat ${duration}s ease-in-out ${delay}s infinite`;
+        
+        container.appendChild(particle);
+    }
+}
+
 // Filter portfolio by category
 const filterButtons = document.querySelectorAll('.filter-btn');
 const portfolioCards = document.querySelectorAll('.portfolio-card');
 
 filterButtons.forEach(button => {
     button.addEventListener('click', () => {
-        // Update active button
         filterButtons.forEach(btn => btn.classList.remove('active'));
         button.classList.add('active');
 
-        // Filter cards
         const filter = button.getAttribute('data-filter');
         portfolioCards.forEach(card => {
             if (filter === 'all' || card.getAttribute('data-category') === filter) {
@@ -44,10 +68,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
     
-    // For now, just show a confirmation
     alert(`Thank you ${name}! Your message has been received. I'll get back to you at ${email} soon.`);
-    
-    // Reset form
     this.reset();
 });
 
@@ -66,9 +87,21 @@ const observer = new IntersectionObserver(function(entries) {
     });
 }, observerOptions);
 
-document.querySelectorAll('.experience-card, .portfolio-card').forEach(el => {
+document.querySelectorAll('.experience-card, .portfolio-card, .review-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
     observer.observe(el);
+});
+
+// Initialize particles on page load
+window.addEventListener('load', () => {
+    createParticles();
+});
+
+// Logo placeholder update (user can add their image URL)
+const logoImage = document.getElementById('logoImage');
+logoImage.addEventListener('error', () => {
+    logoImage.style.display = 'none';
+    document.querySelector('.logo-placeholder').style.display = 'block';
 });
