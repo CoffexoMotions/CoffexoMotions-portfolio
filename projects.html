@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - CoffexoMotions</title>
+    <meta name="description" content="Recent video editing, motion graphics, and short-form projects by CoffexoMotions.">
+    <meta property="og:title" content="Projects - CoffexoMotions">
+    <meta property="og:description" content="Recent projects by CoffexoMotions.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="logo.png">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Particles Background -->
+    <div class="particles-container" id="particlesContainer"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo-container">
+                <img src="logo.png" alt="CoffexoMotions logo" class="logo-image" id="logoImage">
+                <span class="logo-placeholder">CoffexoMotions</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Portfolio Section -->
+    <main class="page-main">
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <h2>Recent Projects</h2>
+                <div class="portfolio-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="editing">Editing</button>
+                    <button class="filter-btn" data-filter="motion">Motion</button>
+                    <button class="filter-btn" data-filter="short">Shorts</button>
+                </div>
+                <div class="portfolio-grid">
+                    <div class="portfolio-card" data-category="editing">
+                        <div class="portfolio-card-inner">
+                            <div class="video-container">
+                                <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="card-content">
+                                <h3>Project Title</h3>
+                                <p class="category-tag">Editing</p>
+                            </div>
+                        </div>
+                        <div class="card-border"></div>
+                    </div>
+                    <div class="portfolio-card" data-category="motion">
+                        <div class="portfolio-card-inner">
+                            <div class="video-container">
+                                <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="card-content">
+                                <h3>Project Title</h3>
+                                <p class="category-tag">Motion</p>
+                            </div>
+                        </div>
+                        <div class="card-border"></div>
+                    </div>
+                    <div class="portfolio-card" data-category="short">
+                        <div class="portfolio-card-inner">
+                            <div class="video-container">
+                                <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="card-content">
+                                <h3>Project Title</h3>
+                                <p class="category-tag">Shorts</p>
+                            </div>
+                        </div>
+                        <div class="card-border"></div>
+                    </div>
+                    <div class="portfolio-card" data-category="editing">
+                        <div class="portfolio-card-inner">
+                            <div class="video-container">
+                                <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="card-content">
+                                <h3>Project Title</h3>
+                                <p class="category-tag">Editing</p>
+                            </div>
+                        </div>
+                        <div class="card-border"></div>
+                    </div>
+                    <div class="portfolio-card" data-category="motion">
+                        <div class="portfolio-card-inner">
+                            <div class="video-container">
+                                <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="card-content">
+                                <h3>Project Title</h3>
+                                <p class="category-tag">Motion</p>
+                            </div>
+                        </div>
+                        <div class="card-border"></div>
+                    </div>
+                    <div class="portfolio-card" data-category="short">
+                        <div class="portfolio-card-inner">
+                            <div class="video-container">
+                                <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="card-content">
+                                <h3>Project Title</h3>
+                                <p class="category-tag">Shorts</p>
+                            </div>
+                        </div>
+                        <div class="card-border"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 CoffexoMotions. All rights reserved.</p>
+            <p class="footer-subtitle">Crafted with passion for visual storytelling</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

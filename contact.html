@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - CoffexoMotions</title>
+    <meta name="description" content="Get in touch with CoffexoMotions for your next video editing project.">
+    <meta property="og:title" content="Contact - CoffexoMotions">
+    <meta property="og:description" content="Contact CoffexoMotions.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="logo.png">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Particles Background -->
+    <div class="particles-container" id="particlesContainer"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo-container">
+                <img src="logo.png" alt="CoffexoMotions logo" class="logo-image" id="logoImage">
+                <span class="logo-placeholder">CoffexoMotions</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <main class="page-main">
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="info-item">
+                            <span class="icon">📧</span>
+                            <div>
+                                <p class="info-label">Email</p>
+                                <a href="mailto:coffexo.motions@gmail.com">coffexo.motions@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="icon">🎥</span>
+                            <div>
+                                <p class="info-label">YouTube Channel</p>
+                                <a href="https://youtube.com/@coffexo?si=UUgOv5bfUAkDJe6Q" target="_blank" rel="noopener">Subscribe to CoffexoMotions</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-contact">
+                        <h3>Send a Message</h3>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" placeholder="Your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" placeholder="your.email@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" placeholder="Tell me about your project" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="submit-btn">Send Message</button>
+                            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 CoffexoMotions. All rights reserved.</p>
+            <p class="footer-subtitle">Crafted with passion for visual storytelling</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
