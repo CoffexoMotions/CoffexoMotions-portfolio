@@ -35,12 +35,17 @@ filterButtons.forEach(button => {
 
         const filter = button.getAttribute('data-filter');
         portfolioCards.forEach(card => {
-            if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                card.style.display = 'block';
-                setTimeout(() => card.style.opacity = '1', 10);
+            const matches = filter === 'all' || card.getAttribute('data-category') === filter;
+            if (matches) {
+                card.style.display = '';
+                requestAnimationFrame(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                });
             } else {
                 card.style.opacity = '0';
-                setTimeout(() => card.style.display = 'none', 300);
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => { card.style.display = 'none'; }, 300);
             }
         });
     });
@@ -60,17 +65,28 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Contact form submission
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    
-    alert(`Thank you ${name}! Your message has been received. I'll get back to you at ${email} soon.`);
-    this.reset();
-});
+// Contact form submission - opens the visitor's email client with a prefilled message
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        const subject = encodeURIComponent(`New project inquiry from ${name}`);
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+        window.location.href = `mailto:coffexo.motions@gmail.com?subject=${subject}&body=${body}`;
+
+        const status = document.getElementById('formStatus');
+        if (status) {
+            status.textContent = `Thanks ${name}! Your email app should open to send the message. I'll reply to ${email} soon.`;
+            status.classList.add('visible');
+        }
+        this.reset();
+    });
+}
 
 // Add scroll animation
 const observerOptions = {
@@ -99,9 +115,12 @@ window.addEventListener('load', () => {
     createParticles();
 });
 
-// Logo placeholder update (user can add their image URL)
+// Logo placeholder fallback - show text if the logo image fails to load
 const logoImage = document.getElementById('logoImage');
-logoImage.addEventListener('error', () => {
-    logoImage.style.display = 'none';
-    document.querySelector('.logo-placeholder').style.display = 'block';
-});
+if (logoImage) {
+    logoImage.addEventListener('error', () => {
+        logoImage.style.display = 'none';
+        const placeholder = document.querySelector('.logo-placeholder');
+        if (placeholder) placeholder.style.display = 'block';
+    });
+}
