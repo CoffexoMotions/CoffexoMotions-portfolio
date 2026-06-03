@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CoffexoMotions - Video Editing Portfolio</title>
+    <meta name="description" content="CoffexoMotions - professional video editor specializing in editing, motion graphics, color grading, and post-production. View recent work and get in touch.">
+    <meta property="og:title" content="CoffexoMotions - Video Editing Portfolio">
+    <meta property="og:description" content="Professional video editing, motion graphics, and post-production by CoffexoMotions.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="logo.png">
+    <link rel="icon" type="image/png" href="logo.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -13,10 +19,10 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo-container">
-                <img src="" alt="CoffexoMotions" class="logo-image" id="logoImage">
-                <span class="logo-placeholder">Your Logo</span>
-            </div>
+            <a href="#home" class="logo-container">
+                <img src="logo.png" alt="CoffexoMotions logo" class="logo-image" id="logoImage">
+                <span class="logo-placeholder">CoffexoMotions</span>
+            </a>
             <ul class="nav-links">
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#about">About</a></li>
@@ -47,42 +53,22 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <div class="about-wrapper">
-                <div class="about-text">
-                    <h2>About Me</h2>
-                    <p>I'm a passionate video editor with expertise in creating stunning visual content. From cinematic edits to dynamic motion graphics, I specialize in bringing creative visions to life through innovative editing techniques and attention to detail.</p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <h3>50+</h3>
-                            <p>Projects Completed</p>
-                        </div>
-                        <div class="stat">
-                            <h3>5+</h3>
-                            <p>Years Experience</p>
-                        </div>
-                        <div class="stat">
-                            <h3>100%</h3>
-                            <p>Client Satisfaction</p>
-                        </div>
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>I'm a passionate video editor with expertise in creating stunning visual content. From cinematic edits to dynamic motion graphics, I specialize in bringing creative visions to life through innovative editing techniques and attention to detail.</p>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>50+</h3>
+                        <p>Projects Completed</p>
                     </div>
-                </div>
-                <div class="about-contact">
-                    <h3>Get In Touch</h3>
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" placeholder="Your name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" placeholder="your.email@example.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" placeholder="Tell me about your project" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
+                    <div class="stat">
+                        <h3>5+</h3>
+                        <p>Years Experience</p>
+                    </div>
+                    <div class="stat">
+                        <h3>100%</h3>
+                        <p>Client Satisfaction</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -270,9 +256,28 @@
                         <span class="icon">🎥</span>
                         <div>
                             <p class="info-label">YouTube Channel</p>
-                            <a href="https://youtube.com/@coffexo?si=UUgOv5bfUAkDJe6Q" target="_blank">Subscribe to CoffexoMotions</a>
+                            <a href="https://youtube.com/@coffexo?si=UUgOv5bfUAkDJe6Q" target="_blank" rel="noopener">Subscribe to CoffexoMotions</a>
                         </div>
                     </div>
+                </div>
+                <div class="about-contact">
+                    <h3>Send a Message</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="your.email@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Tell me about your project" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+                    </form>
                 </div>
             </div>
         </div>
