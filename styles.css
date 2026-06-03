@@ -166,8 +166,18 @@ body {
     transition: width 0.3s ease;
 }
 
-.nav-links a:hover::after {
+.nav-links a:hover::after,
+.nav-links a.active::after {
     width: 100%;
+}
+
+.nav-links a.active {
+    font-weight: 700;
+}
+
+/* ===== Inner page layout ===== */
+.page-main {
+    min-height: calc(100vh - 230px);
 }
 
 /* ===== Hero Section ===== */
@@ -457,9 +467,29 @@ body {
 }
 
 .card-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    display: block;
+    width: 72px;
+    height: 72px;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--bg-light);
+    border: 2px solid rgba(92, 61, 46, 0.15);
+    color: var(--brown-dark);
+    transition: var(--transition);
+}
+
+.card-icon svg {
+    width: 34px;
+    height: 34px;
+}
+
+.experience-card:hover .card-icon {
+    background: var(--brown-dark);
+    color: white;
+    border-color: var(--brown-dark);
+    transform: scale(1.05);
 }
 
 .experience-card h3 {
