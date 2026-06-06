@@ -1,6 +1,8 @@
 // Create animated particles background
 function createParticles() {
     const container = document.getElementById('particlesContainer');
+    if (!container) return;
+    
     const particleCount = 30;
 
     for (let i = 0; i < particleCount; i++) {
@@ -22,6 +24,24 @@ function createParticles() {
         
         container.appendChild(particle);
     }
+}
+
+// Update active nav link based on current page
+function updateActiveNavLink() {
+    const currentLocation = location.pathname;
+    const navLinks = document.querySelectorAll('.nav-links a');
+    
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        
+        if (link.getAttribute('href') === '../index.html' || link.getAttribute('href') === 'index.html') {
+            if (currentLocation.includes('index.html') || currentLocation.endsWith('/')) {
+                link.classList.add('active');
+            }
+        } else if (currentLocation.includes(link.getAttribute('href'))) {
+            link.classList.add('active');
+        }
+    });
 }
 
 // Filter portfolio by category
@@ -46,31 +66,20 @@ filterButtons.forEach(button => {
     });
 });
 
-// Smooth scroll for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
-    });
-});
-
 // Contact form submission
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    
-    alert(`Thank you ${name}! Your message has been received. I'll get back to you at ${email} soon.`);
-    this.reset();
-});
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        
+        alert(`Thank you ${name}! Your message has been received. I'll get back to you at ${email} soon.`);
+        this.reset();
+    });
+}
 
 // Add scroll animation
 const observerOptions = {
@@ -87,7 +96,8 @@ const observer = new IntersectionObserver(function(entries) {
     });
 }, observerOptions);
 
-document.querySelectorAll('.experience-card, .portfolio-card, .review-card').forEach(el => {
+const elementsToObserve = document.querySelectorAll('.experience-card, .portfolio-card, .review-card, .stat, .about-text, .contact-info');
+elementsToObserve.forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -97,11 +107,17 @@ document.querySelectorAll('.experience-card, .portfolio-card, .review-card').for
 // Initialize particles on page load
 window.addEventListener('load', () => {
     createParticles();
+    updateActiveNavLink();
 });
 
 // Logo placeholder update (user can add their image URL)
 const logoImage = document.getElementById('logoImage');
-logoImage.addEventListener('error', () => {
-    logoImage.style.display = 'none';
-    document.querySelector('.logo-placeholder').style.display = 'block';
-});
+if (logoImage) {
+    logoImage.addEventListener('error', () => {
+        logoImage.style.display = 'none';
+        const placeholder = document.querySelector('.logo-placeholder');
+        if (placeholder) {
+            placeholder.style.display = 'block';
+        }
+    });
+}

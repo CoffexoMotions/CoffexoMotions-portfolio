@@ -163,7 +163,8 @@ body {
     transition: width 0.3s ease;
 }
 
-.nav-links a:hover::after {
+.nav-links a:hover::after,
+.nav-links a.active::after {
     width: 100%;
 }
 
@@ -273,12 +274,22 @@ body {
     box-shadow: 0 15px 30px rgba(92, 61, 46, 0.3);
 }
 
-/* ===== About Section ===== */
-.about {
+/* ===== Page Section ===== */
+.page-section {
     background: linear-gradient(135deg, var(--bg-cream) 0%, var(--bg-light) 100%);
     padding: 80px 20px;
+    min-height: calc(100vh - 200px);
 }
 
+.page-section h2 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--brown-dark);
+    font-weight: 800;
+}
+
+/* ===== About Section ===== */
 .about-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -400,19 +411,6 @@ body {
 }
 
 /* ===== Experience Section ===== */
-.experience {
-    background-color: var(--bg-cream);
-    padding: 80px 20px;
-}
-
-.experience h2 {
-    font-size: 2.8rem;
-    text-align: center;
-    margin-bottom: 4rem;
-    color: var(--brown-dark);
-    font-weight: 800;
-}
-
 .experience-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -451,6 +449,16 @@ body {
     font-size: 3rem;
     margin-bottom: 1rem;
     display: block;
+    width: 60px;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--brown-dark);
+}
+
+.card-icon svg {
+    width: 100%;
+    height: 100%;
 }
 
 .experience-card h3 {
@@ -467,19 +475,6 @@ body {
 }
 
 /* ===== Portfolio Section ===== */
-.portfolio {
-    background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-cream) 100%);
-    padding: 80px 20px;
-}
-
-.portfolio h2 {
-    font-size: 2.8rem;
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--brown-dark);
-    font-weight: 800;
-}
-
 .portfolio-filter {
     display: flex;
     justify-content: center;
@@ -602,19 +597,6 @@ body {
 }
 
 /* ===== Reviews Section ===== */
-.reviews {
-    background-color: var(--bg-cream);
-    padding: 80px 20px;
-}
-
-.reviews h2 {
-    font-size: 2.8rem;
-    text-align: center;
-    margin-bottom: 4rem;
-    color: var(--brown-dark);
-    font-weight: 800;
-}
-
 .reviews-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -647,9 +629,13 @@ body {
 }
 
 .review-stars {
-    font-size: 1.2rem;
+    display: flex;
+    gap: 0.5rem;
     margin-bottom: 1rem;
-    display: block;
+}
+
+.star-icon {
+    color: #FFC107;
 }
 
 .review-text {
@@ -705,27 +691,23 @@ body {
 }
 
 /* ===== Contact Section ===== */
-.contact {
-    background-color: var(--bg-cream);
-    padding: 80px 20px;
-}
-
-.contact h2 {
-    font-size: 2.8rem;
-    text-align: center;
-    margin-bottom: 3rem;
-    color: var(--brown-dark);
-    font-weight: 800;
-}
-
 .contact-content {
-    max-width: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 900px;
     margin: 0 auto;
 }
 
 .contact-info h3 {
     font-size: 1.5rem;
     margin-bottom: 2rem;
+    color: var(--brown-dark);
+}
+
+.contact-form-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
     color: var(--brown-dark);
 }
 
@@ -749,6 +731,14 @@ body {
 .info-item .icon {
     font-size: 2rem;
     flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    color: var(--brown-dark);
+}
+
+.info-item .icon svg {
+    width: 100%;
+    height: 100%;
 }
 
 .info-label {
@@ -868,11 +858,11 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .experience h2,
-    .portfolio h2,
-    .reviews h2,
-    .about-text h2,
-    .contact h2 {
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .page-section h2 {
         font-size: 2rem;
     }
 

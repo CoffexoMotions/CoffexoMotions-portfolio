@@ -18,18 +18,18 @@
                 <span class="logo-placeholder">Your Logo</span>
             </div>
             <ul class="nav-links">
-                <li><a href="#home">HOME</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#portfolio">Projects</a></li>
-                <li><a href="#reviews">Reviews</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html" class="nav-link active">HOME</a></li>
+                <li><a href="pages/about.html" class="nav-link">About</a></li>
+                <li><a href="pages/experience.html" class="nav-link">Experience</a></li>
+                <li><a href="pages/portfolio.html" class="nav-link">Projects</a></li>
+                <li><a href="pages/reviews.html" class="nav-link">Reviews</a></li>
+                <li><a href="pages/contact.html" class="nav-link">Contact</a></li>
             </ul>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section class="hero">
         <div class="hero-content">
             <div class="profile-circle">
                 <div class="profile-initials">CM</div>
@@ -39,243 +39,9 @@
                 <p class="tagline">Professional Video Editor</p>
                 <p class="subtitle">Transforming raw footage into compelling visual stories</p>
             </div>
-            <a href="#portfolio" class="cta-button">View My Work</a>
+            <a href="pages/portfolio.html" class="cta-button">View My Work</a>
         </div>
         <div class="hero-decoration"></div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-wrapper">
-                <div class="about-text">
-                    <h2>About Me</h2>
-                    <p>I'm a passionate video editor with expertise in creating stunning visual content. From cinematic edits to dynamic motion graphics, I specialize in bringing creative visions to life through innovative editing techniques and attention to detail.</p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <h3>50+</h3>
-                            <p>Projects Completed</p>
-                        </div>
-                        <div class="stat">
-                            <h3>5+</h3>
-                            <p>Years Experience</p>
-                        </div>
-                        <div class="stat">
-                            <h3>100%</h3>
-                            <p>Client Satisfaction</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-contact">
-                    <h3>Get In Touch</h3>
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" placeholder="Your name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" placeholder="your.email@example.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" placeholder="Tell me about your project" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2>My Expertise</h2>
-            <div class="experience-grid">
-                <div class="experience-card">
-                    <div class="card-icon">✂️</div>
-                    <h3>Video Editing</h3>
-                    <p>Professional editing with seamless transitions and precise color grading</p>
-                </div>
-                <div class="experience-card">
-                    <div class="card-icon">✨</div>
-                    <h3>Motion Graphics</h3>
-                    <p>Dynamic animations and visual effects that capture attention</p>
-                </div>
-                <div class="experience-card">
-                    <div class="card-icon">🎨</div>
-                    <h3>Color Grading</h3>
-                    <p>Professional color correction and cinematic grading</p>
-                </div>
-                <div class="experience-card">
-                    <div class="card-icon">🔊</div>
-                    <h3>Audio Design</h3>
-                    <p>Sound design, mixing, and audio synchronization</p>
-                </div>
-                <div class="experience-card">
-                    <div class="card-icon">🎬</div>
-                    <h3>Post-Production</h3>
-                    <p>Complete post-production workflow management</p>
-                </div>
-                <div class="experience-card">
-                    <div class="card-icon">🛠️</div>
-                    <h3>Adobe Suite</h3>
-                    <p>Expert in Premiere Pro, After Effects, and Audition</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <h2>Recent Projects</h2>
-            <div class="portfolio-filter">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="editing">Editing</button>
-                <button class="filter-btn" data-filter="motion">Motion</button>
-                <button class="filter-btn" data-filter="short">Shorts</button>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-card" data-category="editing">
-                    <div class="portfolio-card-inner">
-                        <div class="video-container">
-                            <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                        <div class="card-content">
-                            <h3>Project Title</h3>
-                            <p class="category-tag">Editing</p>
-                        </div>
-                    </div>
-                    <div class="card-border"></div>
-                </div>
-                <div class="portfolio-card" data-category="motion">
-                    <div class="portfolio-card-inner">
-                        <div class="video-container">
-                            <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                        <div class="card-content">
-                            <h3>Project Title</h3>
-                            <p class="category-tag">Motion</p>
-                        </div>
-                    </div>
-                    <div class="card-border"></div>
-                </div>
-                <div class="portfolio-card" data-category="short">
-                    <div class="portfolio-card-inner">
-                        <div class="video-container">
-                            <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                        <div class="card-content">
-                            <h3>Project Title</h3>
-                            <p class="category-tag">Shorts</p>
-                        </div>
-                    </div>
-                    <div class="card-border"></div>
-                </div>
-                <div class="portfolio-card" data-category="editing">
-                    <div class="portfolio-card-inner">
-                        <div class="video-container">
-                            <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                        <div class="card-content">
-                            <h3>Project Title</h3>
-                            <p class="category-tag">Editing</p>
-                        </div>
-                    </div>
-                    <div class="card-border"></div>
-                </div>
-                <div class="portfolio-card" data-category="motion">
-                    <div class="portfolio-card-inner">
-                        <div class="video-container">
-                            <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                        <div class="card-content">
-                            <h3>Project Title</h3>
-                            <p class="category-tag">Motion</p>
-                        </div>
-                    </div>
-                    <div class="card-border"></div>
-                </div>
-                <div class="portfolio-card" data-category="short">
-                    <div class="portfolio-card-inner">
-                        <div class="video-container">
-                            <iframe width="100%" height="280" src="https://www.youtube.com/embed/" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                        <div class="card-content">
-                            <h3>Project Title</h3>
-                            <p class="category-tag">Shorts</p>
-                        </div>
-                    </div>
-                    <div class="card-border"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Reviews Section -->
-    <section id="reviews" class="reviews">
-        <div class="container">
-            <h2>Client Reviews</h2>
-            <div class="reviews-grid">
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"CoffexoMotions delivered an exceptional video that exceeded all my expectations. The attention to detail and creative approach was outstanding!"</p>
-                    <p class="review-author">- Sarah Johnson</p>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Professional, responsive, and incredibly talented. The final product was amazing and our audience loved it. Highly recommended!"</p>
-                    <p class="review-author">- Michael Chen</p>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Working with CoffexoMotions was a game-changer. They brought our vision to life with creativity and technical excellence."</p>
-                    <p class="review-author">- Emma Davis</p>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">⭐⭐⭐⭐⭐</div>
-                    <p class="review-text">"Best investment we made for our brand. The editing quality and turnaround time was phenomenal. Will definitely work together again!"</p>
-                    <p class="review-author">- James Williams</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2>Ready to Create Something Amazing?</h2>
-            <p>Let's collaborate on your next video project</p>
-            <a href="#about" class="cta-button-large">Start Your Project</a>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <div class="info-item">
-                        <span class="icon">📧</span>
-                        <div>
-                            <p class="info-label">Email</p>
-                            <a href="mailto:coffexo.motions@gmail.com">coffexo.motions@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <span class="icon">🎥</span>
-                        <div>
-                            <p class="info-label">YouTube Channel</p>
-                            <a href="https://youtube.com/@coffexo?si=UUgOv5bfUAkDJe6Q" target="_blank">Subscribe to CoffexoMotions</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- Footer -->
