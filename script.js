@@ -72,12 +72,29 @@ if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
+        const formData = new FormData(this);
+        const formStatus = document.getElementById('formStatus');
         
-        alert(`Thank you ${name}! Your message has been received. I'll get back to you at ${email} soon.`);
-        this.reset();
+        fetch('../process_contact.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                formStatus.innerHTML = '<p style="color: #4CAF50; font-weight: bold;">✅ ' + data.message + '</p>';
+                contactForm.reset();
+                setTimeout(() => {
+                    formStatus.innerHTML = '';
+                }, 5000);
+            } else {
+                formStatus.innerHTML = '<p style="color: #f44336; font-weight: bold;">❌ ' + data.message + '</p>';
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            formStatus.innerHTML = '<p style="color: #f44336; font-weight: bold;">❌ Error sending message. Please try again.</p>';
+        });
     });
 }
 
